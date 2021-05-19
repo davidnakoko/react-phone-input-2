@@ -229,14 +229,14 @@ class PhoneInput extends React.Component {
   }
 
   componentDidMount() {
-    if (document.addEventListener && this.props.enableClickOutside) {
-      document.addEventListener('mousedown', this.handleClickOutside);
+    if (window.addEventListener && this.props.enableClickOutside) {
+      window.addEventListener('mousedown', this.handleClickOutside);
     }
   }
 
   componentWillUnmount() {
-    if (document.removeEventListener && this.props.enableClickOutside) {
-      document.removeEventListener('mousedown', this.handleClickOutside);
+    if (window.removeEventListener && this.props.enableClickOutside) {
+      window.removeEventListener('mousedown', this.handleClickOutside);
     }
   }
 
